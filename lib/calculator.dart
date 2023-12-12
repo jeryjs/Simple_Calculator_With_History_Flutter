@@ -54,6 +54,7 @@ class _CalculatorState extends State<Calculator> {
     exp = str.replaceAll('%', '/100*');
     exp = exp.replaceAll('x', '*');
     exp = exp.replaceAll('÷', '/');
+    exp = exp.replaceAll(RegExp(r'[*%/]$'), '');
     return exp;
   }
 
